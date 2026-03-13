@@ -14,26 +14,6 @@ headers = {
 JST = timezone(timedelta(hours=9))
 
 
-def season_list():
-    now = datetime.now(JST)
-
-    if now.month >= 7:
-        current = now.year
-    else:
-        current = now.year - 1
-
-    return [current - 1, current, current + 1]
-
-
-LEAGUE_NAME_MAP = {
-    "Premier League": "Premier League",
-    "UEFA Champions League": "Champions League",
-    "FA Cup": "FA Cup",
-    "League Cup": "EFL Cup",
-    "Community Shield": "Community Shield"
-}
-
-
 def get_json(url):
     r = requests.get(url, headers=headers)
     r.raise_for_status()
@@ -53,6 +33,53 @@ def convert_time(date_string):
     )
 
 
+def get_goalscorers(fixture_id):
+
+    url = f"{BASE}/fixtures/events?fixture={fixture_id}"
+
+    res = get_json(url)
+
+    scorers = []
+
+    for e in res["response"]:
+
+        if e["type"] == "Goal":
+
+            player = e["player"]["name"]
+            minute = e["time"]["elapsed"]
+
+            scorers.append(f"{player} {minute}'")
+
+    return scorers
+
+
+def build_description(match):
+
+    desc = []
+
+    status = match["fixture"]["status"]["short"]
+
+    home = match["teams"]["home"]["name"]
+    away = match["teams"]["away"]["name"]
+
+    if status == "FT":
+
+        score_home = match["goals"]["home"]
+        score_away = match["goals"]["away"]
+
+        desc.append("Result")
+        desc.append(f"{home} {score_home}-{score_away} {away}")
+        desc.append("")
+
+        scorers = get_goalscorers(match["fixture"]["id"])
+
+        if scorers:
+            desc.append("Goals")
+            desc.extend(scorers)
+
+    return "\\n".join(desc)
+
+
 def build_event(match):
 
     fixture_id = match["fixture"]["id"]
@@ -60,16 +87,16 @@ def build_event(match):
     home = match["teams"]["home"]["name"]
     away = match["teams"]["away"]["name"]
 
-    league_raw = match["league"]["name"]
+    league = match["league"]["name"]
     round_name = match["league"]["round"]
-
-    league = LEAGUE_NAME_MAP.get(league_raw, league_raw)
 
     stadium = match["fixture"]["venue"]["name"]
 
     start, end = convert_time(match["fixture"]["date"])
 
     title = f"{home} vs {away} - {league} ({round_name})"
+
+    description = build_description(match)
 
     uid = f"{fixture_id}@mancity-calendar"
 
@@ -82,6 +109,7 @@ SUMMARY:{title}
 LOCATION:{stadium}
 DTSTART;TZID=Asia/Tokyo:{start}
 DTEND;TZID=Asia/Tokyo:{end}
+DESCRIPTION:{description}
 END:VEVENT
 """
 
@@ -106,28 +134,30 @@ def write_calendar(filename, events):
 
 def main():
 
-    official = []
-    friendly = []
+    events = []
 
-    for season in season_list():
+    # 過去＋未来の試合を必ず取得
+    past = get_json(f"{BASE}/fixtures?team={TEAM_ID}&last=50")
+    future = get_json(f"{BASE}/fixtures?team={TEAM_ID}&next=50")
 
-        fixtures = get_json(
-            f"{BASE}/fixtures?team={TEAM_ID}&season={season}"
-        )
+    matches = past["response"] + future["response"]
 
-        for match in fixtures["response"]:
+    seen = set()
 
-            league = match["league"]["name"]
+    for match in matches:
 
-            event = build_event(match)
+        fixture_id = match["fixture"]["id"]
 
-            if league == "Friendlies Clubs":
-                friendly.append(event)
-            else:
-                official.append(event)
+        if fixture_id in seen:
+            continue
 
-    write_calendar("city_official.ics", official)
-    write_calendar("city_friendly.ics", friendly)
+        seen.add(fixture_id)
+
+        event = build_event(match)
+
+        events.append(event)
+
+    write_calendar("city_official.ics", events)
 
 
 main()
