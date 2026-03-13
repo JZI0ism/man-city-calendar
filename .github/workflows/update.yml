@@ -15,6 +15,44 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Debug API response (goals check)
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: |
+          python - << 'PYEOF'
+import json
+from urllib.request import urlopen, Request
+
+BASE_URL = "https://api.football-data.org/v4"
+MAN_CITY_TEAM_ID = 65
+api_key = __import__("os").environ["FOOTBALL_DATA_KEY"]
+
+def fetch(url, extra=None):
+    headers = {"X-Auth-Token": api_key}
+    if extra:
+        headers.update(extra)
+    with urlopen(Request(url, headers=headers), timeout=15) as res:
+        return json.loads(res.read().decode())
+
+# 直近の終了試合を1件取得
+data = fetch(f"{BASE_URL}/teams/{MAN_CITY_TEAM_ID}/matches?status=FINISHED")
+matches = data.get("matches", [])
+if not matches:
+    print("No finished matches found")
+else:
+    m = matches[-1]
+    match_id = m["id"]
+    home = (m.get("homeTeam") or {}).get("name", "?")
+    away = (m.get("awayTeam") or {}).get("name", "?")
+    print(f"Match: {home} vs {away}  (ID: {match_id})")
+
+    # 個別試合の詳細を取得
+    detail = fetch(f"{BASE_URL}/matches/{match_id}")
+    print(f"Top-level keys: {list(detail.keys())}")
+    goals = detail.get("goals")
+    print(f"goals field: {json.dumps(goals, indent=2)}")
+PYEOF
+
       - name: Generate ICS
         env:
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
@@ -31,8 +69,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add city_official.ics
           if git diff --staged --quiet; then
-            echo "変更なし。スキップします。"
+            echo "No changes."
           else
-            git commit -m "chore: カレンダー自動更新 $(date +'%Y-%m-%d')"
+            git commit -m "chore: update calendar $(date +'%Y-%m-%d')"
             git push
           fi
