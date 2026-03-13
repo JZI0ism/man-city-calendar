@@ -24,7 +24,7 @@ jobs:
             --output city_official.ics \
             --timezone Asia/Tokyo \
             --tz-offset 9 \
-            --season 2024
+            --season 2025
 
       - name: Commit and push if changed
         run: |
