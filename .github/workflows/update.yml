@@ -17,7 +17,7 @@ jobs:
 
       - name: Generate ICS
         env:
-          API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+          API_SPORTS_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           python generate_mancity_ics.py \
             --api-key "$API_SPORTS_KEY" \
