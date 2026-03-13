@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Debug script: prints raw goals data from API for the latest finished match."""
 import json, os, sys
 from urllib.request import urlopen, Request
 
