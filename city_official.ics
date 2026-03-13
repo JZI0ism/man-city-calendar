@@ -4,389 +4,330 @@ PRODID:-//ManCity Calendar//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Manchester City FC
 X-WR-TIMEZONE:Asia/Tokyo
-X-WR-CALDESC:Manchester City FC 試合日程 (自動生成 via football-data.org)
 BEGIN:VEVENT
 UID:f3cd4ff6-c338-59ee-ac07-7c00e0716704
 DTSTART;TZID=Asia/Tokyo:20250817T013000
 DTEND;TZID=Asia/Tokyo:20250817T031500
-SUMMARY:Wolverhampton 0-4 Man City [Premier League]
-DESCRIPTION:Premier League | 第1節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Wolverhampton vs Man City - Premier League Matchday 1
+DESCRIPTION:Result: Wolverhampton 0-4 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:1244fc13-b39d-58d0-a2c3-29f77f46a427
 DTSTART;TZID=Asia/Tokyo:20250823T203000
 DTEND;TZID=Asia/Tokyo:20250823T221500
-SUMMARY:Man City 0-2 Tottenham [Premier League]
-DESCRIPTION:Premier League | 第2節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Tottenham - Premier League Matchday 2
+DESCRIPTION:Result: Man City 0-2 Tottenham\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:a6cbdd56-123e-5270-8f72-dafce77acc0d
 DTSTART;TZID=Asia/Tokyo:20250831T220000
 DTEND;TZID=Asia/Tokyo:20250831T234500
-SUMMARY:Brighton Hove 2-1 Man City [Premier League]
-DESCRIPTION:Premier League | 第3節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Brighton Hove vs Man City - Premier League Matchday 3
+DESCRIPTION:Result: Brighton Hove 2-1 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:b16e2f30-d583-561e-b4ee-ff206399484f
 DTSTART;TZID=Asia/Tokyo:20250915T003000
 DTEND;TZID=Asia/Tokyo:20250915T021500
-SUMMARY:Man City 3-0 Man United [Premier League]
-DESCRIPTION:Premier League | 第4節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Man United - Premier League Matchday 4
+DESCRIPTION:Result: Man City 3-0 Man United\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:8ba29325-b89d-5081-8383-3ba15387e48d
 DTSTART;TZID=Asia/Tokyo:20250919T040000
 DTEND;TZID=Asia/Tokyo:20250919T054500
-SUMMARY:Man City 2-0 Napoli [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第1節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Napoli - UEFA Champions League League Stage
+DESCRIPTION:Result: Man City 2-0 Napoli
 END:VEVENT
 BEGIN:VEVENT
 UID:a6acb771-4b3c-526d-ae48-a5a9755180d0
 DTSTART;TZID=Asia/Tokyo:20250922T003000
 DTEND;TZID=Asia/Tokyo:20250922T021500
-SUMMARY:Arsenal 1-1 Man City [Premier League]
-DESCRIPTION:Premier League | 第5節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Arsenal vs Man City - Premier League Matchday 5
+DESCRIPTION:Result: Arsenal 1-1 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:e0f52f95-8a9e-5112-be58-d45f44d3391f
 DTSTART;TZID=Asia/Tokyo:20250927T230000
 DTEND;TZID=Asia/Tokyo:20250928T004500
-SUMMARY:Man City 5-1 Burnley [Premier League]
-DESCRIPTION:Premier League | 第6節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Burnley - Premier League Matchday 6
+DESCRIPTION:Result: Man City 5-1 Burnley\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:a3ae0174-4f9f-59b9-a39f-a0b7c8a39ac8
 DTSTART;TZID=Asia/Tokyo:20251002T040000
 DTEND;TZID=Asia/Tokyo:20251002T054500
-SUMMARY:Monaco 2-2 Man City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第2節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Monaco vs Man City - UEFA Champions League League Stage
+DESCRIPTION:Result: Monaco 2-2 Man City
 END:VEVENT
 BEGIN:VEVENT
 UID:2f6f2cb7-c647-54eb-8b48-bcf750027d4a
 DTSTART;TZID=Asia/Tokyo:20251006T003000
 DTEND;TZID=Asia/Tokyo:20251006T021500
-SUMMARY:Brentford 0-1 Man City [Premier League]
-DESCRIPTION:Premier League | 第7節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Brentford vs Man City - Premier League Matchday 7
+DESCRIPTION:Result: Brentford 0-1 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:cec83e72-fabe-5179-84ab-55110adce3b0
 DTSTART;TZID=Asia/Tokyo:20251018T230000
 DTEND;TZID=Asia/Tokyo:20251019T004500
-SUMMARY:Man City 2-0 Everton [Premier League]
-DESCRIPTION:Premier League | 第8節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Everton - Premier League Matchday 8
+DESCRIPTION:Result: Man City 2-0 Everton\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:cc339d60-a74d-530f-ab8c-e20cce4c1f2d
 DTSTART;TZID=Asia/Tokyo:20251022T040000
 DTEND;TZID=Asia/Tokyo:20251022T054500
-SUMMARY:Villarreal 0-2 Man City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第3節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Villarreal vs Man City - UEFA Champions League League Stage
+DESCRIPTION:Result: Villarreal 0-2 Man City
 END:VEVENT
 BEGIN:VEVENT
 UID:d677dff5-822a-5a38-a0d4-bed3c77dc0c5
 DTSTART;TZID=Asia/Tokyo:20251026T230000
 DTEND;TZID=Asia/Tokyo:20251027T004500
-SUMMARY:Aston Villa 1-0 Man City [Premier League]
-DESCRIPTION:Premier League | 第9節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Aston Villa vs Man City - Premier League Matchday 9
+DESCRIPTION:Result: Aston Villa 1-0 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:cfb17219-dd6e-5941-bad5-0c2b8c0b7867
 DTSTART;TZID=Asia/Tokyo:20251103T013000
 DTEND;TZID=Asia/Tokyo:20251103T031500
-SUMMARY:Man City 3-1 Bournemouth [Premier League]
-DESCRIPTION:Premier League | 第10節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Bournemouth - Premier League Matchday 10
+DESCRIPTION:Result: Man City 3-1 Bournemouth\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:9ab86909-dca5-53fd-8f67-f377bb496811
 DTSTART;TZID=Asia/Tokyo:20251106T050000
 DTEND;TZID=Asia/Tokyo:20251106T064500
-SUMMARY:Man City 4-1 Dortmund [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第4節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Dortmund - UEFA Champions League League Stage
+DESCRIPTION:Result: Man City 4-1 Dortmund
 END:VEVENT
 BEGIN:VEVENT
 UID:d69635c9-2e1b-5c68-ab73-18b1df46b8bf
 DTSTART;TZID=Asia/Tokyo:20251110T013000
 DTEND;TZID=Asia/Tokyo:20251110T031500
-SUMMARY:Man City 3-0 Liverpool [Premier League]
-DESCRIPTION:Premier League | 第11節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Liverpool - Premier League Matchday 11
+DESCRIPTION:Result: Man City 3-0 Liverpool\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:036544f3-b17a-5756-a4e7-2809a168f14b
 DTSTART;TZID=Asia/Tokyo:20251123T023000
 DTEND;TZID=Asia/Tokyo:20251123T041500
-SUMMARY:Newcastle 2-1 Man City [Premier League]
-DESCRIPTION:Premier League | 第12節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Newcastle vs Man City - Premier League Matchday 12
+DESCRIPTION:Result: Newcastle 2-1 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:f6f0281f-e3bc-5ece-9aef-85112dac3696
 DTSTART;TZID=Asia/Tokyo:20251126T050000
 DTEND;TZID=Asia/Tokyo:20251126T064500
-SUMMARY:Man City 0-2 Leverkusen [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第5節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Leverkusen - UEFA Champions League League Stage
+DESCRIPTION:Result: Man City 0-2 Leverkusen
 END:VEVENT
 BEGIN:VEVENT
 UID:edbf7cc9-6489-5df4-851c-9da50b1a2d6c
 DTSTART;TZID=Asia/Tokyo:20251130T000000
 DTEND;TZID=Asia/Tokyo:20251130T014500
-SUMMARY:Man City 3-2 Leeds United [Premier League]
-DESCRIPTION:Premier League | 第13節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Leeds United - Premier League Matchday 13
+DESCRIPTION:Result: Man City 3-2 Leeds United\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:e19e1167-45f6-518f-92ad-af514467a5d8
 DTSTART;TZID=Asia/Tokyo:20251203T043000
 DTEND;TZID=Asia/Tokyo:20251203T061500
-SUMMARY:Fulham 4-5 Man City [Premier League]
-DESCRIPTION:Premier League | 第14節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Fulham vs Man City - Premier League Matchday 14
+DESCRIPTION:Result: Fulham 4-5 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:f79c1be7-43fa-58e0-a212-1b9d6792fea5
 DTSTART;TZID=Asia/Tokyo:20251207T000000
 DTEND;TZID=Asia/Tokyo:20251207T014500
-SUMMARY:Man City 3-0 Sunderland [Premier League]
-DESCRIPTION:Premier League | 第15節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Sunderland - Premier League Matchday 15
+DESCRIPTION:Result: Man City 3-0 Sunderland\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:1ab76b66-e0e4-51f1-9554-526f604acb86
 DTSTART;TZID=Asia/Tokyo:20251211T050000
 DTEND;TZID=Asia/Tokyo:20251211T064500
-SUMMARY:Real Madrid 1-2 Man City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第6節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Real Madrid vs Man City - UEFA Champions League League Stage
+DESCRIPTION:Result: Real Madrid 1-2 Man City
 END:VEVENT
 BEGIN:VEVENT
 UID:c981b8d8-6711-5a1e-819a-aaf0e13cbdb3
 DTSTART;TZID=Asia/Tokyo:20251214T230000
 DTEND;TZID=Asia/Tokyo:20251215T004500
-SUMMARY:Crystal Palace 0-3 Man City [Premier League]
-DESCRIPTION:Premier League | 第16節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Crystal Palace vs Man City - Premier League Matchday 16
+DESCRIPTION:Result: Crystal Palace 0-3 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:5bd567f8-110c-5218-83ea-7397911ce482
 DTSTART;TZID=Asia/Tokyo:20251221T000000
 DTEND;TZID=Asia/Tokyo:20251221T014500
-SUMMARY:Man City 3-0 West Ham [Premier League]
-DESCRIPTION:Premier League | 第17節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs West Ham - Premier League Matchday 17
+DESCRIPTION:Result: Man City 3-0 West Ham\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:5b59ec78-b083-522c-90c1-a4311ac64934
 DTSTART;TZID=Asia/Tokyo:20251227T213000
 DTEND;TZID=Asia/Tokyo:20251227T231500
-SUMMARY:Nottingham 1-2 Man City [Premier League]
-DESCRIPTION:Premier League | 第18節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Nottingham vs Man City - Premier League Matchday 18
+DESCRIPTION:Result: Nottingham 1-2 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:e669ef88-0443-5219-853b-8d6673e3a044
 DTSTART;TZID=Asia/Tokyo:20260102T050000
 DTEND;TZID=Asia/Tokyo:20260102T064500
-SUMMARY:Sunderland 0-0 Man City [Premier League]
-DESCRIPTION:Premier League | 第19節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Sunderland vs Man City - Premier League Matchday 19
+DESCRIPTION:Result: Sunderland 0-0 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:dcff1271-73bd-57a3-a225-427048b63c7f
 DTSTART;TZID=Asia/Tokyo:20260105T023000
 DTEND;TZID=Asia/Tokyo:20260105T041500
-SUMMARY:Man City 1-1 Chelsea [Premier League]
-DESCRIPTION:Premier League | 第20節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Chelsea - Premier League Matchday 20
+DESCRIPTION:Result: Man City 1-1 Chelsea\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:7252b130-69be-593c-ac5e-b7abf957178b
 DTSTART;TZID=Asia/Tokyo:20260108T043000
 DTEND;TZID=Asia/Tokyo:20260108T061500
-SUMMARY:Man City 1-1 Brighton Hove [Premier League]
-DESCRIPTION:Premier League | 第21節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Brighton Hove - Premier League Matchday 21
+DESCRIPTION:Result: Man City 1-1 Brighton Hove\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:0f11da83-670a-506d-bb19-d840fee7f45b
 DTSTART;TZID=Asia/Tokyo:20260117T213000
 DTEND;TZID=Asia/Tokyo:20260117T231500
-SUMMARY:Man United 2-0 Man City [Premier League]
-DESCRIPTION:Premier League | 第22節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man United vs Man City - Premier League Matchday 22
+DESCRIPTION:Result: Man United 2-0 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:3872d700-e4cc-5417-8c95-6d1dba0536f3
 DTSTART;TZID=Asia/Tokyo:20260121T024500
 DTEND;TZID=Asia/Tokyo:20260121T043000
-SUMMARY:Bodø/Glimt 3-1 Man City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第7節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Bodø/Glimt vs Man City - UEFA Champions League League Stage
+DESCRIPTION:Result: Bodø/Glimt 3-1 Man City
 END:VEVENT
 BEGIN:VEVENT
 UID:d61067ba-3503-5c45-a4d9-7dcb3f76ce59
 DTSTART;TZID=Asia/Tokyo:20260125T000000
 DTEND;TZID=Asia/Tokyo:20260125T014500
-SUMMARY:Man City 2-0 Wolverhampton [Premier League]
-DESCRIPTION:Premier League | 第23節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Wolverhampton - Premier League Matchday 23
+DESCRIPTION:Result: Man City 2-0 Wolverhampton\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:53d0be05-e48d-5fda-abe2-bc6b5e3b6f84
 DTSTART;TZID=Asia/Tokyo:20260129T050000
 DTEND;TZID=Asia/Tokyo:20260129T064500
-SUMMARY:Man City 2-0 Galatasaray [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第8節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Galatasaray - UEFA Champions League League Stage
+DESCRIPTION:Result: Man City 2-0 Galatasaray
 END:VEVENT
 BEGIN:VEVENT
 UID:4129d42b-4456-57b2-807b-2aa59ed575fc
 DTSTART;TZID=Asia/Tokyo:20260202T013000
 DTEND;TZID=Asia/Tokyo:20260202T031500
-SUMMARY:Tottenham 2-2 Man City [Premier League]
-DESCRIPTION:Premier League | 第24節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Tottenham vs Man City - Premier League Matchday 24
+DESCRIPTION:Result: Tottenham 2-2 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:7981d308-e9f6-5889-9c6a-4ac2fd12e2ae
 DTSTART;TZID=Asia/Tokyo:20260209T013000
 DTEND;TZID=Asia/Tokyo:20260209T031500
-SUMMARY:Liverpool 1-2 Man City [Premier League]
-DESCRIPTION:Premier League | 第25節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Liverpool vs Man City - Premier League Matchday 25
+DESCRIPTION:Result: Liverpool 1-2 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:49a041a8-382b-59f1-9dab-61ba6dda16eb
 DTSTART;TZID=Asia/Tokyo:20260212T043000
 DTEND;TZID=Asia/Tokyo:20260212T061500
-SUMMARY:Man City 3-0 Fulham [Premier League]
-DESCRIPTION:Premier League | 第26節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Fulham - Premier League Matchday 26
+DESCRIPTION:Result: Man City 3-0 Fulham\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:8b88bc62-3aec-5e55-ad6a-1d4eaf9f5acd
 DTSTART;TZID=Asia/Tokyo:20260222T050000
 DTEND;TZID=Asia/Tokyo:20260222T064500
-SUMMARY:Man City 2-1 Newcastle [Premier League]
-DESCRIPTION:Premier League | 第27節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Newcastle - Premier League Matchday 27
+DESCRIPTION:Result: Man City 2-1 Newcastle\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:df673ed0-bb88-5139-847b-5948a1a3d076
 DTSTART;TZID=Asia/Tokyo:20260301T023000
 DTEND;TZID=Asia/Tokyo:20260301T041500
-SUMMARY:Leeds United 0-1 Man City [Premier League]
-DESCRIPTION:Premier League | 第28節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Leeds United vs Man City - Premier League Matchday 28
+DESCRIPTION:Result: Leeds United 0-1 Man City\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:dec0d0dd-f149-5e75-89f8-08386c81fc07
 DTSTART;TZID=Asia/Tokyo:20260305T043000
 DTEND;TZID=Asia/Tokyo:20260305T061500
-SUMMARY:Man City 2-2 Nottingham [Premier League]
-DESCRIPTION:Premier League | 第29節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Man City vs Nottingham - Premier League Matchday 29
+DESCRIPTION:Result: Man City 2-2 Nottingham\\n\\nPL Standings (Top 5):\\n   1. Arsenal            67pts  GD+37\\n   2. Man City           60pts  GD+32\\n   3. Man United         51pts  GD+11\\n   4. Aston Villa        51pts  GD+5\\n   5. Chelsea            48pts  GD+19\\nMan City: 2nd  60pts
 END:VEVENT
 BEGIN:VEVENT
 UID:480880cc-7474-5f23-95b4-1943087def96
 DTSTART;TZID=Asia/Tokyo:20260312T050000
 DTEND;TZID=Asia/Tokyo:20260312T064500
-SUMMARY:Real Madrid 3-0 Man City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第1節 | 状態: FINISHED
-LOCATION:
+SUMMARY:Real Madrid vs Man City - UEFA Champions League Round of 16
+DESCRIPTION:Result: Real Madrid 3-0 Man City
 END:VEVENT
 BEGIN:VEVENT
 UID:992cc303-72b8-58cb-87ef-43036be8a30d
 DTSTART;TZID=Asia/Tokyo:20260315T050000
 DTEND;TZID=Asia/Tokyo:20260315T064500
-SUMMARY:West Ham vs Man City [Premier League]
-DESCRIPTION:Premier League | 第30節 | 状態: TIMED
-LOCATION:
+SUMMARY:West Ham vs Man City - Premier League Matchday 30
 END:VEVENT
 BEGIN:VEVENT
 UID:1c98df70-29ac-53c5-a623-ec725a5092de
 DTSTART;TZID=Asia/Tokyo:20260318T050000
 DTEND;TZID=Asia/Tokyo:20260318T064500
-SUMMARY:Man City vs Real Madrid [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | 第2節 | 状態: TIMED
-LOCATION:
+SUMMARY:Man City vs Real Madrid - UEFA Champions League Round of 16
 END:VEVENT
 BEGIN:VEVENT
 UID:4b447229-a3b3-57d2-95a9-136cec239f69
 DTSTART;TZID=Asia/Tokyo:20260321T090000
 DTEND;TZID=Asia/Tokyo:20260321T104500
-SUMMARY:Man City vs Crystal Palace [Premier League]
-DESCRIPTION:Premier League | 第31節 | 状態: POSTPONED
-LOCATION:
+SUMMARY:Man City vs Crystal Palace - Premier League Matchday 31
 END:VEVENT
 BEGIN:VEVENT
 UID:795adf64-70cc-5e4b-9918-341cfa3da992
 DTSTART;TZID=Asia/Tokyo:20260413T003000
 DTEND;TZID=Asia/Tokyo:20260413T021500
-SUMMARY:Chelsea vs Man City [Premier League]
-DESCRIPTION:Premier League | 第32節 | 状態: TIMED
-LOCATION:
+SUMMARY:Chelsea vs Man City - Premier League Matchday 32
 END:VEVENT
 BEGIN:VEVENT
 UID:82a126be-6d45-519e-ab1a-033659c3bbb4
 DTSTART;TZID=Asia/Tokyo:20260420T003000
 DTEND;TZID=Asia/Tokyo:20260420T021500
-SUMMARY:Man City vs Arsenal [Premier League]
-DESCRIPTION:Premier League | 第33節 | 状態: TIMED
-LOCATION:
+SUMMARY:Man City vs Arsenal - Premier League Matchday 33
 END:VEVENT
 BEGIN:VEVENT
 UID:74b8bf21-3a1d-5f9e-b4e8-c526eb950478
 DTSTART;TZID=Asia/Tokyo:20260426T220000
 DTEND;TZID=Asia/Tokyo:20260426T234500
-SUMMARY:Burnley vs Man City [Premier League]
-DESCRIPTION:Premier League | 第34節 | 状態: TIMED
-LOCATION:
+SUMMARY:Burnley vs Man City - Premier League Matchday 34
 END:VEVENT
 BEGIN:VEVENT
 UID:61fb72d0-7c39-51a1-9c65-4ea912e63c63
 DTSTART;TZID=Asia/Tokyo:20260502T230000
 DTEND;TZID=Asia/Tokyo:20260503T004500
-SUMMARY:Everton vs Man City [Premier League]
-DESCRIPTION:Premier League | 第35節 | 状態: TIMED
-LOCATION:
+SUMMARY:Everton vs Man City - Premier League Matchday 35
 END:VEVENT
 BEGIN:VEVENT
 UID:50663c0c-75fd-5000-a4db-1372233b1ca2
 DTSTART;TZID=Asia/Tokyo:20260509T230000
 DTEND;TZID=Asia/Tokyo:20260510T004500
-SUMMARY:Man City vs Brentford [Premier League]
-DESCRIPTION:Premier League | 第36節 | 状態: TIMED
-LOCATION:
+SUMMARY:Man City vs Brentford - Premier League Matchday 36
 END:VEVENT
 BEGIN:VEVENT
 UID:1ac77cb6-3cfd-5f3e-9008-bcf7bd8ae022
 DTSTART;TZID=Asia/Tokyo:20260517T230000
 DTEND;TZID=Asia/Tokyo:20260518T004500
-SUMMARY:Bournemouth vs Man City [Premier League]
-DESCRIPTION:Premier League | 第37節 | 状態: TIMED
-LOCATION:
+SUMMARY:Bournemouth vs Man City - Premier League Matchday 37
 END:VEVENT
 BEGIN:VEVENT
 UID:1495400e-7dd1-5266-8d79-7a44be2aed63
 DTSTART;TZID=Asia/Tokyo:20260525T000000
 DTEND;TZID=Asia/Tokyo:20260525T014500
-SUMMARY:Man City vs Aston Villa [Premier League]
-DESCRIPTION:Premier League | 第38節 | 状態: TIMED
-LOCATION:
+SUMMARY:Man City vs Aston Villa - Premier League Matchday 38
 END:VEVENT
 END:VCALENDAR
