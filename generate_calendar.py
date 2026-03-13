@@ -1,24 +1,24 @@
 import requests
-from datetime import datetime, timedelta
-import os
+from datetime import datetime, timedelta, timezone
 
-API_KEY = os.environ["API_FOOTBALL_KEY"]
+API_KEY = "YOUR_API_KEY"
+TEAM_ID = 50
+
+JST = timezone(timedelta(hours=9))
 
 headers = {
     "x-apisports-key": API_KEY
 }
 
-url = "https://v3.football.api-sports.io/fixtures?team=50&season=2024"
+fixtures_url = "https://v3.football.api-sports.io/fixtures?team=50&season=2025"
 
-res = requests.get(url, headers=headers).json()
+res = requests.get(fixtures_url, headers=headers)
+data = res.json()
 
-if "response" not in res:
-    print(res)
-    raise Exception("API error")
+official_events = []
+friendly_events = []
 
-events = []
-
-for match in res["response"]:
+for match in data["response"]:
 
     home = match["teams"]["home"]["name"]
     away = match["teams"]["away"]["name"]
@@ -28,29 +28,39 @@ for match in res["response"]:
 
     stadium = match["fixture"]["venue"]["name"]
 
-    date = match["fixture"]["date"]
+    date_utc = datetime.fromisoformat(match["fixture"]["date"].replace("Z", "+00:00"))
+    date_jst = date_utc.astimezone(JST)
 
-    start = datetime.fromisoformat(date.replace("Z","+00:00"))
-    end = start + timedelta(hours=2)
+    end_time = date_jst + timedelta(hours=2)
+
+    dtstart = date_jst.strftime("%Y%m%dT%H%M%S")
+    dtend = end_time.strftime("%Y%m%dT%H%M%S")
 
     title = f"{home} vs {away} - {league} ({round_name})"
 
     event = f"""BEGIN:VEVENT
 SUMMARY:{title}
 LOCATION:{stadium}
-DTSTART:{start.strftime('%Y%m%dT%H%M%SZ')}
-DTEND:{end.strftime('%Y%m%dT%H%M%SZ')}
+DTSTART:{dtstart}
+DTEND:{dtend}
 END:VEVENT
 """
 
-    events.append(event)
+    if league == "Friendlies Clubs":
+        friendly_events.append(event)
+    else:
+        official_events.append(event)
 
-calendar = "BEGIN:VCALENDAR\nVERSION:2.0\n"
+def write_calendar(filename, events):
 
-for e in events:
-    calendar += e
+    with open(filename, "w") as f:
+        f.write("BEGIN:VCALENDAR\n")
+        f.write("VERSION:2.0\n")
 
-calendar += "END:VCALENDAR"
+        for e in events:
+            f.write(e)
 
-with open("city_official.ics","w") as f:
-    f.write(calendar)
+        f.write("END:VCALENDAR")
+
+write_calendar("city_official.ics", official_events)
+write_calendar("city_friendly.ics", friendly_events)
