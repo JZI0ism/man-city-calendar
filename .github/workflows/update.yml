@@ -9,27 +9,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install requests
+      - run: pip install requests
 
-      - name: Generate calendar
-        run: python generate_calendar.py
+      - run: python generate_calendar.py
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
 
-      - name: Commit calendar
-        run: |
+      - run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add .
-          git commit -m "update calendar"
+          git commit -m "update calendar" || exit 0
           git push
