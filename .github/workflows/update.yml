@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install requests
+      - run: pip install requests pytz
 
       - run: python generate_calendar.py
         env:
