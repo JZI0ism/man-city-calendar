@@ -15,10 +15,34 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Debug API response (goals check)
+      - name: Debug API goals response
         env:
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
-        run: python debug_api.py
+        run: |
+          python3 -c "
+import json, os
+from urllib.request import urlopen, Request
+
+BASE_URL = 'https://api.football-data.org/v4'
+api_key = os.environ['FOOTBALL_DATA_KEY']
+
+def fetch(url):
+    with urlopen(Request(url, headers={'X-Auth-Token': api_key}), timeout=15) as r:
+        return json.loads(r.read().decode())
+
+data = fetch(f'{BASE_URL}/teams/65/matches?status=FINISHED')
+matches = data.get('matches', [])
+if not matches:
+    print('No finished matches')
+else:
+    m = matches[-1]
+    mid = m['id']
+    print(f'Match ID: {mid}')
+    print(f'  {(m.get(\"homeTeam\") or {}).get(\"name\")} vs {(m.get(\"awayTeam\") or {}).get(\"name\")}')
+    detail = fetch(f'{BASE_URL}/matches/{mid}')
+    print(f'Keys: {list(detail.keys())}')
+    print(f'goals: {json.dumps(detail.get(\"goals\"), indent=2)}')
+"
 
       - name: Generate ICS
         env:
