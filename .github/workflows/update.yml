@@ -3,7 +3,7 @@ name: Update Man City Calendar
 on:
   schedule:
     - cron: "0 21 * * *"   # 毎朝 6:00 JST (= 21:00 UTC)
-  workflow_dispatch:        # 手動実行も可能
+  workflow_dispatch:
 
 jobs:
   update-ics:
@@ -17,14 +17,13 @@ jobs:
 
       - name: Generate ICS
         env:
-          API_SPORTS_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: |
           python generate_mancity_ics.py \
-            --api-key "$API_SPORTS_KEY" \
+            --api-key "$FOOTBALL_DATA_KEY" \
             --output city_official.ics \
             --timezone Asia/Tokyo \
-            --tz-offset 9 \
-            --season 2025
+            --tz-offset 9
 
       - name: Commit and push if changed
         run: |
