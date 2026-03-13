@@ -1,34 +1,35 @@
 name: Update Calendar
 
 on:
- schedule:
-   - cron: "0 */3 * * *"
- workflow_dispatch:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
 
 jobs:
- build:
-   runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-   steps:
-     - uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-     - name: Setup Python
-       uses: actions/setup-python@v4
-       with:
-         python-version: "3.11"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-     - name: Install requests
-       run: pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-     - name: Generate calendar
-       run: python generate_calendar.py
-       env:
-         API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      - name: Generate calendar
+        run: python generate_calendar.py
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
 
-     - name: Commit ICS
-       run: |
-         git config --global user.name "github-actions"
-         git config --global user.email "actions@github.com"
-         git add .
-         git commit -m "update calendar"
-         git push
+      - name: Commit calendar
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "update calendar"
+          git push
