@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, timezone
 API_KEY = os.environ["API_FOOTBALL_KEY"]
 
 TEAM_ID = 50
+PREMIER_LEAGUE_ID = 39
 BASE = "https://v3.football.api-sports.io"
 
 headers = {
@@ -18,6 +19,16 @@ def get_json(url):
     r = requests.get(url, headers=headers)
     r.raise_for_status()
     return r.json()
+
+
+def current_season():
+
+    now = datetime.now(JST)
+
+    if now.month >= 7:
+        return now.year
+    else:
+        return now.year - 1
 
 
 def convert_time(date_string):
@@ -53,7 +64,28 @@ def get_goalscorers(fixture_id):
     return scorers
 
 
-def build_description(match):
+def get_premier_league_table(season):
+
+    url = f"{BASE}/standings?league={PREMIER_LEAGUE_ID}&season={season}"
+
+    res = get_json(url)
+
+    table = res["response"][0]["league"]["standings"][0]
+
+    top5 = []
+    city_pos = None
+
+    for t in table[:5]:
+        top5.append(f'{t["rank"]}. {t["team"]["name"]}')
+
+    for t in table:
+        if t["team"]["id"] == TEAM_ID:
+            city_pos = t["rank"]
+
+    return top5, city_pos
+
+
+def build_description(match, season):
 
     desc = []
 
@@ -74,13 +106,24 @@ def build_description(match):
         scorers = get_goalscorers(match["fixture"]["id"])
 
         if scorers:
-            desc.append("Goals")
+            desc.append("Scorers")
             desc.extend(scorers)
+            desc.append("")
+
+        if match["league"]["id"] == PREMIER_LEAGUE_ID:
+
+            top5, city_pos = get_premier_league_table(season)
+
+            desc.append("Premier League Top 5")
+            desc.extend(top5)
+            desc.append("")
+            desc.append("Manchester City Position")
+            desc.append(str(city_pos))
 
     return "\\n".join(desc)
 
 
-def build_event(match):
+def build_event(match, season):
 
     fixture_id = match["fixture"]["id"]
 
@@ -96,7 +139,7 @@ def build_event(match):
 
     title = f"{home} vs {away} - {league} ({round_name})"
 
-    description = build_description(match)
+    description = build_description(match, season)
 
     uid = f"{fixture_id}@mancity-calendar"
 
@@ -116,9 +159,9 @@ END:VEVENT
     return event
 
 
-def write_calendar(filename, events):
+def write_calendar(events):
 
-    with open(filename, "w") as f:
+    with open("city_official.ics", "w") as f:
 
         f.write("BEGIN:VCALENDAR\n")
         f.write("VERSION:2.0\n")
@@ -135,29 +178,29 @@ def write_calendar(filename, events):
 def main():
 
     events = []
-
-    # 過去＋未来の試合を必ず取得
-    past = get_json(f"{BASE}/fixtures?team={TEAM_ID}&last=50")
-    future = get_json(f"{BASE}/fixtures?team={TEAM_ID}&next=50")
-
-    matches = past["response"] + future["response"]
-
     seen = set()
 
-    for match in matches:
+    season_now = current_season()
+    seasons = [season_now, season_now + 1]
 
-        fixture_id = match["fixture"]["id"]
+    for season in seasons:
 
-        if fixture_id in seen:
-            continue
+        data = get_json(
+            f"{BASE}/fixtures?team={TEAM_ID}&season={season}"
+        )
 
-        seen.add(fixture_id)
+        for match in data["response"]:
 
-        event = build_event(match)
+            fixture_id = match["fixture"]["id"]
 
-        events.append(event)
+            if fixture_id in seen:
+                continue
 
-    write_calendar("city_official.ics", events)
+            seen.add(fixture_id)
+
+            events.append(build_event(match, season))
+
+    write_calendar(events)
 
 
 main()
