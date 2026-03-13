@@ -4,453 +4,389 @@ PRODID:-//ManCity Calendar//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Manchester City FC
 X-WR-TIMEZONE:Asia/Tokyo
-X-WR-CALDESC:Manchester City FC 試合日程 (自動生成 via API-Sports)
+X-WR-CALDESC:Manchester City FC 試合日程 (自動生成 via football-data.org)
 BEGIN:VEVENT
-UID:29af7a8e-11b5-561f-9b0c-edebe43c23c3
-DTSTART;TZID=Asia/Tokyo:20240819T003000
-DTEND;TZID=Asia/Tokyo:20240819T021500
-SUMMARY:Chelsea 0-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 1 | 会場: Stamford Bridge | 状態: Match Finished
-LOCATION:Stamford Bridge
+UID:f3cd4ff6-c338-59ee-ac07-7c00e0716704
+DTSTART;TZID=Asia/Tokyo:20250817T013000
+DTEND;TZID=Asia/Tokyo:20250817T031500
+SUMMARY:Wolverhampton 0-4 Man City [Premier League]
+DESCRIPTION:Premier League | 第1節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:7c9e7733-e92e-5de2-a57d-1f4488fb6e97
-DTSTART;TZID=Asia/Tokyo:20240824T230000
-DTEND;TZID=Asia/Tokyo:20240825T004500
-SUMMARY:Manchester City 4-1 Ipswich [Premier League]
-DESCRIPTION:Premier League | Regular Season - 2 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:1244fc13-b39d-58d0-a2c3-29f77f46a427
+DTSTART;TZID=Asia/Tokyo:20250823T203000
+DTEND;TZID=Asia/Tokyo:20250823T221500
+SUMMARY:Man City 0-2 Tottenham [Premier League]
+DESCRIPTION:Premier League | 第2節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:ec969a20-5616-51ad-858f-cb593702624b
-DTSTART;TZID=Asia/Tokyo:20240901T013000
-DTEND;TZID=Asia/Tokyo:20240901T031500
-SUMMARY:West Ham 1-3 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 3 | 会場: London Stadium | 状態: Match Finished
-LOCATION:London Stadium
+UID:a6cbdd56-123e-5270-8f72-dafce77acc0d
+DTSTART;TZID=Asia/Tokyo:20250831T220000
+DTEND;TZID=Asia/Tokyo:20250831T234500
+SUMMARY:Brighton Hove 2-1 Man City [Premier League]
+DESCRIPTION:Premier League | 第3節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:78c49b4f-b00a-5b26-813c-0f372017790b
-DTSTART;TZID=Asia/Tokyo:20240914T230000
-DTEND;TZID=Asia/Tokyo:20240915T004500
-SUMMARY:Manchester City 2-1 Brentford [Premier League]
-DESCRIPTION:Premier League | Regular Season - 4 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:b16e2f30-d583-561e-b4ee-ff206399484f
+DTSTART;TZID=Asia/Tokyo:20250915T003000
+DTEND;TZID=Asia/Tokyo:20250915T021500
+SUMMARY:Man City 3-0 Man United [Premier League]
+DESCRIPTION:Premier League | 第4節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:8d89575d-7382-5cd0-b37d-58b67e659325
-DTSTART;TZID=Asia/Tokyo:20240923T003000
-DTEND;TZID=Asia/Tokyo:20240923T021500
-SUMMARY:Manchester City 2-2 Arsenal [Premier League]
-DESCRIPTION:Premier League | Regular Season - 5 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:8ba29325-b89d-5081-8383-3ba15387e48d
+DTSTART;TZID=Asia/Tokyo:20250919T040000
+DTEND;TZID=Asia/Tokyo:20250919T054500
+SUMMARY:Man City 2-0 Napoli [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第1節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:b1e37076-aec7-5fe5-a8e7-a143c16acd60
-DTSTART;TZID=Asia/Tokyo:20240928T203000
-DTEND;TZID=Asia/Tokyo:20240928T221500
-SUMMARY:Newcastle 1-1 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 6 | 会場: St. James' Park | 状態: Match Finished
-LOCATION:St. James' Park
+UID:a6acb771-4b3c-526d-ae48-a5a9755180d0
+DTSTART;TZID=Asia/Tokyo:20250922T003000
+DTEND;TZID=Asia/Tokyo:20250922T021500
+SUMMARY:Arsenal 1-1 Man City [Premier League]
+DESCRIPTION:Premier League | 第5節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:66e75cdc-363f-50c0-8332-b67f704c9580
-DTSTART;TZID=Asia/Tokyo:20241005T230000
-DTEND;TZID=Asia/Tokyo:20241006T004500
-SUMMARY:Manchester City 3-2 Fulham [Premier League]
-DESCRIPTION:Premier League | Regular Season - 7 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:e0f52f95-8a9e-5112-be58-d45f44d3391f
+DTSTART;TZID=Asia/Tokyo:20250927T230000
+DTEND;TZID=Asia/Tokyo:20250928T004500
+SUMMARY:Man City 5-1 Burnley [Premier League]
+DESCRIPTION:Premier League | 第6節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:3f1c9681-1517-5947-a5ce-c5514364fd1f
-DTSTART;TZID=Asia/Tokyo:20241020T220000
-DTEND;TZID=Asia/Tokyo:20241020T234500
-SUMMARY:Wolves 1-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 8 | 会場: Molineux Stadium | 状態: Match Finished
-LOCATION:Molineux Stadium
+UID:a3ae0174-4f9f-59b9-a39f-a0b7c8a39ac8
+DTSTART;TZID=Asia/Tokyo:20251002T040000
+DTEND;TZID=Asia/Tokyo:20251002T054500
+SUMMARY:Monaco 2-2 Man City [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第2節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:ea8f3567-92ab-56f8-bb7b-997b43762d30
-DTSTART;TZID=Asia/Tokyo:20241026T230000
-DTEND;TZID=Asia/Tokyo:20241027T004500
-SUMMARY:Manchester City 1-0 Southampton [Premier League]
-DESCRIPTION:Premier League | Regular Season - 9 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:2f6f2cb7-c647-54eb-8b48-bcf750027d4a
+DTSTART;TZID=Asia/Tokyo:20251006T003000
+DTEND;TZID=Asia/Tokyo:20251006T021500
+SUMMARY:Brentford 0-1 Man City [Premier League]
+DESCRIPTION:Premier League | 第7節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:a486ad28-22da-5a36-b840-16bc9c25f14a
-DTSTART;TZID=Asia/Tokyo:20241103T000000
-DTEND;TZID=Asia/Tokyo:20241103T014500
-SUMMARY:Bournemouth 2-1 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 10 | 会場: Vitality Stadium | 状態: Match Finished
-LOCATION:Vitality Stadium
+UID:cec83e72-fabe-5179-84ab-55110adce3b0
+DTSTART;TZID=Asia/Tokyo:20251018T230000
+DTEND;TZID=Asia/Tokyo:20251019T004500
+SUMMARY:Man City 2-0 Everton [Premier League]
+DESCRIPTION:Premier League | 第8節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:dbdbc108-e4b8-54b9-ab19-8f0dc79e16af
-DTSTART;TZID=Asia/Tokyo:20241110T023000
-DTEND;TZID=Asia/Tokyo:20241110T041500
-SUMMARY:Brighton 2-1 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 11 | 会場: American Express Stadium | 状態: Match Finished
-LOCATION:American Express Stadium
+UID:cc339d60-a74d-530f-ab8c-e20cce4c1f2d
+DTSTART;TZID=Asia/Tokyo:20251022T040000
+DTEND;TZID=Asia/Tokyo:20251022T054500
+SUMMARY:Villarreal 0-2 Man City [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第3節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:3dd07516-9c31-558e-ab77-6c64caf0cb31
-DTSTART;TZID=Asia/Tokyo:20241124T023000
-DTEND;TZID=Asia/Tokyo:20241124T041500
-SUMMARY:Manchester City 0-4 Tottenham [Premier League]
-DESCRIPTION:Premier League | Regular Season - 12 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:d677dff5-822a-5a38-a0d4-bed3c77dc0c5
+DTSTART;TZID=Asia/Tokyo:20251026T230000
+DTEND;TZID=Asia/Tokyo:20251027T004500
+SUMMARY:Aston Villa 1-0 Man City [Premier League]
+DESCRIPTION:Premier League | 第9節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:7ca80946-6f20-5b38-a494-7594128193b8
-DTSTART;TZID=Asia/Tokyo:20241202T010000
-DTEND;TZID=Asia/Tokyo:20241202T024500
-SUMMARY:Liverpool 2-0 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 13 | 会場: Anfield | 状態: Match Finished
-LOCATION:Anfield
+UID:cfb17219-dd6e-5941-bad5-0c2b8c0b7867
+DTSTART;TZID=Asia/Tokyo:20251103T013000
+DTEND;TZID=Asia/Tokyo:20251103T031500
+SUMMARY:Man City 3-1 Bournemouth [Premier League]
+DESCRIPTION:Premier League | 第10節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:eb71e678-7a5f-55f7-81cd-87ab9217a43b
-DTSTART;TZID=Asia/Tokyo:20241205T043000
-DTEND;TZID=Asia/Tokyo:20241205T061500
-SUMMARY:Manchester City 3-0 Nottingham Forest [Premier League]
-DESCRIPTION:Premier League | Regular Season - 14 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:9ab86909-dca5-53fd-8f67-f377bb496811
+DTSTART;TZID=Asia/Tokyo:20251106T050000
+DTEND;TZID=Asia/Tokyo:20251106T064500
+SUMMARY:Man City 4-1 Dortmund [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第4節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:cd2cb079-5d9c-5e64-86f9-61445d87e5f8
-DTSTART;TZID=Asia/Tokyo:20241208T000000
-DTEND;TZID=Asia/Tokyo:20241208T014500
-SUMMARY:Crystal Palace 2-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 15 | 会場: Selhurst Park | 状態: Match Finished
-LOCATION:Selhurst Park
+UID:d69635c9-2e1b-5c68-ab73-18b1df46b8bf
+DTSTART;TZID=Asia/Tokyo:20251110T013000
+DTEND;TZID=Asia/Tokyo:20251110T031500
+SUMMARY:Man City 3-0 Liverpool [Premier League]
+DESCRIPTION:Premier League | 第11節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:a73cacdd-478d-5849-9f86-6e5b06b637b8
-DTSTART;TZID=Asia/Tokyo:20241216T013000
-DTEND;TZID=Asia/Tokyo:20241216T031500
-SUMMARY:Manchester City 1-2 Manchester United [Premier League]
-DESCRIPTION:Premier League | Regular Season - 16 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:036544f3-b17a-5756-a4e7-2809a168f14b
+DTSTART;TZID=Asia/Tokyo:20251123T023000
+DTEND;TZID=Asia/Tokyo:20251123T041500
+SUMMARY:Newcastle 2-1 Man City [Premier League]
+DESCRIPTION:Premier League | 第12節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:68a217f9-7397-5d39-a58b-96b791222ae6
-DTSTART;TZID=Asia/Tokyo:20241221T213000
-DTEND;TZID=Asia/Tokyo:20241221T231500
-SUMMARY:Aston Villa 2-1 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 17 | 会場: Villa Park | 状態: Match Finished
-LOCATION:Villa Park
+UID:f6f0281f-e3bc-5ece-9aef-85112dac3696
+DTSTART;TZID=Asia/Tokyo:20251126T050000
+DTEND;TZID=Asia/Tokyo:20251126T064500
+SUMMARY:Man City 0-2 Leverkusen [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第5節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:6bf928f6-5d35-5f1d-89f7-a341985d1c5e
-DTSTART;TZID=Asia/Tokyo:20241226T213000
-DTEND;TZID=Asia/Tokyo:20241226T231500
-SUMMARY:Manchester City 1-1 Everton [Premier League]
-DESCRIPTION:Premier League | Regular Season - 18 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:edbf7cc9-6489-5df4-851c-9da50b1a2d6c
+DTSTART;TZID=Asia/Tokyo:20251130T000000
+DTEND;TZID=Asia/Tokyo:20251130T014500
+SUMMARY:Man City 3-2 Leeds United [Premier League]
+DESCRIPTION:Premier League | 第13節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:a81bc60f-ec9c-507d-8929-9eff05c47b04
-DTSTART;TZID=Asia/Tokyo:20241229T233000
-DTEND;TZID=Asia/Tokyo:20241230T011500
-SUMMARY:Leicester 0-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 19 | 会場: King Power Stadium | 状態: Match Finished
-LOCATION:King Power Stadium
+UID:e19e1167-45f6-518f-92ad-af514467a5d8
+DTSTART;TZID=Asia/Tokyo:20251203T043000
+DTEND;TZID=Asia/Tokyo:20251203T061500
+SUMMARY:Fulham 4-5 Man City [Premier League]
+DESCRIPTION:Premier League | 第14節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:baf284bb-4bc1-5836-a470-936dea2115e3
-DTSTART;TZID=Asia/Tokyo:20250105T000000
-DTEND;TZID=Asia/Tokyo:20250105T014500
-SUMMARY:Manchester City 4-1 West Ham [Premier League]
-DESCRIPTION:Premier League | Regular Season - 20 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:f79c1be7-43fa-58e0-a212-1b9d6792fea5
+DTSTART;TZID=Asia/Tokyo:20251207T000000
+DTEND;TZID=Asia/Tokyo:20251207T014500
+SUMMARY:Man City 3-0 Sunderland [Premier League]
+DESCRIPTION:Premier League | 第15節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:4867dd23-f7c2-578f-bd64-c6ea30fa9a1f
-DTSTART;TZID=Asia/Tokyo:20250115T043000
-DTEND;TZID=Asia/Tokyo:20250115T061500
-SUMMARY:Brentford 2-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 21 | 会場: Gtech Community Stadium | 状態: Match Finished
-LOCATION:Gtech Community Stadium
+UID:1ab76b66-e0e4-51f1-9554-526f604acb86
+DTSTART;TZID=Asia/Tokyo:20251211T050000
+DTEND;TZID=Asia/Tokyo:20251211T064500
+SUMMARY:Real Madrid 1-2 Man City [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第6節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:1b1a256d-ac95-552a-9779-ad7c1830472a
-DTSTART;TZID=Asia/Tokyo:20250120T013000
-DTEND;TZID=Asia/Tokyo:20250120T031500
-SUMMARY:Ipswich 0-6 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 22 | 会場: Portman Road | 状態: Match Finished
-LOCATION:Portman Road
+UID:c981b8d8-6711-5a1e-819a-aaf0e13cbdb3
+DTSTART;TZID=Asia/Tokyo:20251214T230000
+DTEND;TZID=Asia/Tokyo:20251215T004500
+SUMMARY:Crystal Palace 0-3 Man City [Premier League]
+DESCRIPTION:Premier League | 第16節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:483970ac-ea8e-5dbf-bc83-cbd03b5bfa7c
-DTSTART;TZID=Asia/Tokyo:20250126T023000
-DTEND;TZID=Asia/Tokyo:20250126T041500
-SUMMARY:Manchester City 3-1 Chelsea [Premier League]
-DESCRIPTION:Premier League | Regular Season - 23 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:5bd567f8-110c-5218-83ea-7397911ce482
+DTSTART;TZID=Asia/Tokyo:20251221T000000
+DTEND;TZID=Asia/Tokyo:20251221T014500
+SUMMARY:Man City 3-0 West Ham [Premier League]
+DESCRIPTION:Premier League | 第17節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:f4d87c20-419b-5cb7-9b28-feb1a74626c3
-DTSTART;TZID=Asia/Tokyo:20250203T013000
-DTEND;TZID=Asia/Tokyo:20250203T031500
-SUMMARY:Arsenal 5-1 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 24 | 会場: Emirates Stadium | 状態: Match Finished
-LOCATION:Emirates Stadium
+UID:5b59ec78-b083-522c-90c1-a4311ac64934
+DTSTART;TZID=Asia/Tokyo:20251227T213000
+DTEND;TZID=Asia/Tokyo:20251227T231500
+SUMMARY:Nottingham 1-2 Man City [Premier League]
+DESCRIPTION:Premier League | 第18節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:21368f9a-94bc-597f-b0db-9fab48d8a759
-DTSTART;TZID=Asia/Tokyo:20250216T000000
-DTEND;TZID=Asia/Tokyo:20250216T014500
-SUMMARY:Manchester City 4-0 Newcastle [Premier League]
-DESCRIPTION:Premier League | Regular Season - 25 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:e669ef88-0443-5219-853b-8d6673e3a044
+DTSTART;TZID=Asia/Tokyo:20260102T050000
+DTEND;TZID=Asia/Tokyo:20260102T064500
+SUMMARY:Sunderland 0-0 Man City [Premier League]
+DESCRIPTION:Premier League | 第19節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:600549cb-89e8-5529-8195-d4aae1098a69
-DTSTART;TZID=Asia/Tokyo:20250224T013000
-DTEND;TZID=Asia/Tokyo:20250224T031500
-SUMMARY:Manchester City 0-2 Liverpool [Premier League]
-DESCRIPTION:Premier League | Regular Season - 26 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:dcff1271-73bd-57a3-a225-427048b63c7f
+DTSTART;TZID=Asia/Tokyo:20260105T023000
+DTEND;TZID=Asia/Tokyo:20260105T041500
+SUMMARY:Man City 1-1 Chelsea [Premier League]
+DESCRIPTION:Premier League | 第20節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:d85ef406-739a-534d-9fd4-0a1056510f7c
-DTSTART;TZID=Asia/Tokyo:20250227T043000
-DTEND;TZID=Asia/Tokyo:20250227T061500
-SUMMARY:Tottenham 0-1 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 27 | 会場: Tottenham Hotspur Stadium | 状態: Match Finished
-LOCATION:Tottenham Hotspur Stadium
+UID:7252b130-69be-593c-ac5e-b7abf957178b
+DTSTART;TZID=Asia/Tokyo:20260108T043000
+DTEND;TZID=Asia/Tokyo:20260108T061500
+SUMMARY:Man City 1-1 Brighton Hove [Premier League]
+DESCRIPTION:Premier League | 第21節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:6f440bf6-1cb0-5489-8304-53900a7cefeb
-DTSTART;TZID=Asia/Tokyo:20250308T213000
-DTEND;TZID=Asia/Tokyo:20250308T231500
-SUMMARY:Nottingham Forest 1-0 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 28 | 会場: The City Ground | 状態: Match Finished
-LOCATION:The City Ground
+UID:0f11da83-670a-506d-bb19-d840fee7f45b
+DTSTART;TZID=Asia/Tokyo:20260117T213000
+DTEND;TZID=Asia/Tokyo:20260117T231500
+SUMMARY:Man United 2-0 Man City [Premier League]
+DESCRIPTION:Premier League | 第22節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:341a0c8a-eae3-5533-b41d-26433b052524
-DTSTART;TZID=Asia/Tokyo:20250316T000000
-DTEND;TZID=Asia/Tokyo:20250316T014500
-SUMMARY:Manchester City 2-2 Brighton [Premier League]
-DESCRIPTION:Premier League | Regular Season - 29 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:3872d700-e4cc-5417-8c95-6d1dba0536f3
+DTSTART;TZID=Asia/Tokyo:20260121T024500
+DTEND;TZID=Asia/Tokyo:20260121T043000
+SUMMARY:Bodø/Glimt 3-1 Man City [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第7節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:5309daa4-352a-5fb0-9275-5e19af827742
-DTSTART;TZID=Asia/Tokyo:20250403T034500
-DTEND;TZID=Asia/Tokyo:20250403T053000
-SUMMARY:Manchester City 2-0 Leicester [Premier League]
-DESCRIPTION:Premier League | Regular Season - 30 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:d61067ba-3503-5c45-a4d9-7dcb3f76ce59
+DTSTART;TZID=Asia/Tokyo:20260125T000000
+DTEND;TZID=Asia/Tokyo:20260125T014500
+SUMMARY:Man City 2-0 Wolverhampton [Premier League]
+DESCRIPTION:Premier League | 第23節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:93c9c313-bec0-5d3d-9392-247933b3f516
-DTSTART;TZID=Asia/Tokyo:20250407T003000
-DTEND;TZID=Asia/Tokyo:20250407T021500
-SUMMARY:Manchester United 0-0 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 31 | 会場: Old Trafford | 状態: Match Finished
-LOCATION:Old Trafford
+UID:53d0be05-e48d-5fda-abe2-bc6b5e3b6f84
+DTSTART;TZID=Asia/Tokyo:20260129T050000
+DTEND;TZID=Asia/Tokyo:20260129T064500
+SUMMARY:Man City 2-0 Galatasaray [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第8節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:73e0454e-d698-5622-bf28-e9cfab1b3df7
-DTSTART;TZID=Asia/Tokyo:20250412T203000
-DTEND;TZID=Asia/Tokyo:20250412T221500
-SUMMARY:Manchester City 5-2 Crystal Palace [Premier League]
-DESCRIPTION:Premier League | Regular Season - 32 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:4129d42b-4456-57b2-807b-2aa59ed575fc
+DTSTART;TZID=Asia/Tokyo:20260202T013000
+DTEND;TZID=Asia/Tokyo:20260202T031500
+SUMMARY:Tottenham 2-2 Man City [Premier League]
+DESCRIPTION:Premier League | 第24節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:a8d922c1-1bff-5278-820a-2be10912be36
-DTSTART;TZID=Asia/Tokyo:20250419T230000
-DTEND;TZID=Asia/Tokyo:20250420T004500
-SUMMARY:Everton 0-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 33 | 会場: Goodison Park | 状態: Match Finished
-LOCATION:Goodison Park
+UID:7981d308-e9f6-5889-9c6a-4ac2fd12e2ae
+DTSTART;TZID=Asia/Tokyo:20260209T013000
+DTEND;TZID=Asia/Tokyo:20260209T031500
+SUMMARY:Liverpool 1-2 Man City [Premier League]
+DESCRIPTION:Premier League | 第25節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:4d192943-4fe6-57de-b38d-839acd2af33b
-DTSTART;TZID=Asia/Tokyo:20250423T040000
-DTEND;TZID=Asia/Tokyo:20250423T054500
-SUMMARY:Manchester City 2-1 Aston Villa [Premier League]
-DESCRIPTION:Premier League | Regular Season - 34 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:49a041a8-382b-59f1-9dab-61ba6dda16eb
+DTSTART;TZID=Asia/Tokyo:20260212T043000
+DTEND;TZID=Asia/Tokyo:20260212T061500
+SUMMARY:Man City 3-0 Fulham [Premier League]
+DESCRIPTION:Premier League | 第26節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:88fa9243-f686-5c76-8fad-a977a4fe26b7
-DTSTART;TZID=Asia/Tokyo:20250503T040000
-DTEND;TZID=Asia/Tokyo:20250503T054500
-SUMMARY:Manchester City 1-0 Wolves [Premier League]
-DESCRIPTION:Premier League | Regular Season - 35 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:8b88bc62-3aec-5e55-ad6a-1d4eaf9f5acd
+DTSTART;TZID=Asia/Tokyo:20260222T050000
+DTEND;TZID=Asia/Tokyo:20260222T064500
+SUMMARY:Man City 2-1 Newcastle [Premier League]
+DESCRIPTION:Premier League | 第27節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:6a609b05-a921-58a3-b2d8-aca8c35908d2
-DTSTART;TZID=Asia/Tokyo:20250510T230000
-DTEND;TZID=Asia/Tokyo:20250511T004500
-SUMMARY:Southampton 0-0 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 36 | 会場: St. Mary's Stadium | 状態: Match Finished
-LOCATION:St. Mary's Stadium
+UID:df673ed0-bb88-5139-847b-5948a1a3d076
+DTSTART;TZID=Asia/Tokyo:20260301T023000
+DTEND;TZID=Asia/Tokyo:20260301T041500
+SUMMARY:Leeds United 0-1 Man City [Premier League]
+DESCRIPTION:Premier League | 第28節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:b728a5cd-825f-5b9f-88f5-dabf12bea0c0
-DTSTART;TZID=Asia/Tokyo:20250521T040000
-DTEND;TZID=Asia/Tokyo:20250521T054500
-SUMMARY:Manchester City 3-1 Bournemouth [Premier League]
-DESCRIPTION:Premier League | Regular Season - 37 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:dec0d0dd-f149-5e75-89f8-08386c81fc07
+DTSTART;TZID=Asia/Tokyo:20260305T043000
+DTEND;TZID=Asia/Tokyo:20260305T061500
+SUMMARY:Man City 2-2 Nottingham [Premier League]
+DESCRIPTION:Premier League | 第29節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:92ddd264-b025-55db-a7cd-e9e61d31c613
-DTSTART;TZID=Asia/Tokyo:20250526T000000
-DTEND;TZID=Asia/Tokyo:20250526T014500
-SUMMARY:Fulham 0-2 Manchester City [Premier League]
-DESCRIPTION:Premier League | Regular Season - 38 | 会場: Craven Cottage | 状態: Match Finished
-LOCATION:Craven Cottage
+UID:480880cc-7474-5f23-95b4-1943087def96
+DTSTART;TZID=Asia/Tokyo:20260312T050000
+DTEND;TZID=Asia/Tokyo:20260312T064500
+SUMMARY:Real Madrid 3-0 Man City [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第1節 | 状態: FINISHED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:4c286892-dd6a-500e-ba8c-2b1304f5079e
-DTSTART;TZID=Asia/Tokyo:20250112T024500
-DTEND;TZID=Asia/Tokyo:20250112T043000
-SUMMARY:Manchester City 8-0 Salford City [FA Cup]
-DESCRIPTION:FA Cup | 3rd Round | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:992cc303-72b8-58cb-87ef-43036be8a30d
+DTSTART;TZID=Asia/Tokyo:20260315T050000
+DTEND;TZID=Asia/Tokyo:20260315T064500
+SUMMARY:West Ham vs Man City [Premier League]
+DESCRIPTION:Premier League | 第30節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:1babeaaf-1a0c-59b8-90fe-f35ac140afcd
-DTSTART;TZID=Asia/Tokyo:20250208T211500
-DTEND;TZID=Asia/Tokyo:20250208T230000
-SUMMARY:Leyton Orient 1-2 Manchester City [FA Cup]
-DESCRIPTION:FA Cup | 4th Round | 会場: Gaughan Group Stadium | 状態: Match Finished
-LOCATION:Gaughan Group Stadium
+UID:1c98df70-29ac-53c5-a623-ec725a5092de
+DTSTART;TZID=Asia/Tokyo:20260318T050000
+DTEND;TZID=Asia/Tokyo:20260318T064500
+SUMMARY:Man City vs Real Madrid [UEFA Champions League]
+DESCRIPTION:UEFA Champions League | 第2節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:347b2735-8e80-5fd4-aa7f-d35f090de80b
-DTSTART;TZID=Asia/Tokyo:20250302T024500
-DTEND;TZID=Asia/Tokyo:20250302T043000
-SUMMARY:Manchester City 3-1 Plymouth [FA Cup]
-DESCRIPTION:FA Cup | 5th Round | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:4b447229-a3b3-57d2-95a9-136cec239f69
+DTSTART;TZID=Asia/Tokyo:20260321T090000
+DTEND;TZID=Asia/Tokyo:20260321T104500
+SUMMARY:Man City vs Crystal Palace [Premier League]
+DESCRIPTION:Premier League | 第31節 | 状態: POSTPONED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:ae9f95ee-215c-5e81-b5a1-2d70275be2e0
-DTSTART;TZID=Asia/Tokyo:20250331T003000
-DTEND;TZID=Asia/Tokyo:20250331T021500
-SUMMARY:Bournemouth 1-2 Manchester City [FA Cup]
-DESCRIPTION:FA Cup | Quarter-finals | 会場: Vitality Stadium | 状態: Match Finished
-LOCATION:Vitality Stadium
+UID:795adf64-70cc-5e4b-9918-341cfa3da992
+DTSTART;TZID=Asia/Tokyo:20260413T003000
+DTEND;TZID=Asia/Tokyo:20260413T021500
+SUMMARY:Chelsea vs Man City [Premier League]
+DESCRIPTION:Premier League | 第32節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:6e8ec063-dea0-561b-92db-12fe68e9b152
-DTSTART;TZID=Asia/Tokyo:20250428T003000
-DTEND;TZID=Asia/Tokyo:20250428T021500
-SUMMARY:Nottingham Forest 0-2 Manchester City [FA Cup]
-DESCRIPTION:FA Cup | Semi-finals | 会場: Wembley Stadium | 状態: Match Finished
-LOCATION:Wembley Stadium
+UID:82a126be-6d45-519e-ab1a-033659c3bbb4
+DTSTART;TZID=Asia/Tokyo:20260420T003000
+DTEND;TZID=Asia/Tokyo:20260420T021500
+SUMMARY:Man City vs Arsenal [Premier League]
+DESCRIPTION:Premier League | 第33節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:8b36f2bc-1314-5264-aded-12bee51f53a2
-DTSTART;TZID=Asia/Tokyo:20250518T003000
-DTEND;TZID=Asia/Tokyo:20250518T021500
-SUMMARY:Crystal Palace 1-0 Manchester City [FA Cup]
-DESCRIPTION:FA Cup | Final | 会場: Wembley Stadium | 状態: Match Finished
-LOCATION:Wembley Stadium
+UID:74b8bf21-3a1d-5f9e-b4e8-c526eb950478
+DTSTART;TZID=Asia/Tokyo:20260426T220000
+DTEND;TZID=Asia/Tokyo:20260426T234500
+SUMMARY:Burnley vs Man City [Premier League]
+DESCRIPTION:Premier League | 第34節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:fe2e5d97-55fb-544c-ac31-adf1f54f7b08
-DTSTART;TZID=Asia/Tokyo:20240925T034500
-DTEND;TZID=Asia/Tokyo:20240925T053000
-SUMMARY:Manchester City 2-1 Watford [League Cup]
-DESCRIPTION:League Cup | 3rd Round | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:61fb72d0-7c39-51a1-9c65-4ea912e63c63
+DTSTART;TZID=Asia/Tokyo:20260502T230000
+DTEND;TZID=Asia/Tokyo:20260503T004500
+SUMMARY:Everton vs Man City [Premier League]
+DESCRIPTION:Premier League | 第35節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:b4e0733f-f212-5c17-9f2d-7131ffa02045
-DTSTART;TZID=Asia/Tokyo:20241031T051500
-DTEND;TZID=Asia/Tokyo:20241031T070000
-SUMMARY:Tottenham 2-1 Manchester City [League Cup]
-DESCRIPTION:League Cup | Round of 16 | 会場: Tottenham Hotspur Stadium | 状態: Match Finished
-LOCATION:Tottenham Hotspur Stadium
+UID:50663c0c-75fd-5000-a4db-1372233b1ca2
+DTSTART;TZID=Asia/Tokyo:20260509T230000
+DTEND;TZID=Asia/Tokyo:20260510T004500
+SUMMARY:Man City vs Brentford [Premier League]
+DESCRIPTION:Premier League | 第36節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:5061d0cc-6f83-5d20-852a-765e266383a9
-DTSTART;TZID=Asia/Tokyo:20240919T040000
-DTEND;TZID=Asia/Tokyo:20240919T054500
-SUMMARY:Manchester City 0-0 Inter [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 1 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
+UID:1ac77cb6-3cfd-5f3e-9008-bcf7bd8ae022
+DTSTART;TZID=Asia/Tokyo:20260517T230000
+DTEND;TZID=Asia/Tokyo:20260518T004500
+SUMMARY:Bournemouth vs Man City [Premier League]
+DESCRIPTION:Premier League | 第37節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 BEGIN:VEVENT
-UID:ea4e4cd9-ab00-5138-b112-70ae30b6226b
-DTSTART;TZID=Asia/Tokyo:20241002T040000
-DTEND;TZID=Asia/Tokyo:20241002T054500
-SUMMARY:Slovan Bratislava 0-4 Manchester City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 2 | 会場: Štadión Tehelné pole | 状態: Match Finished
-LOCATION:Štadión Tehelné pole
-END:VEVENT
-BEGIN:VEVENT
-UID:5f8c0875-ac36-55f9-9adb-6d17b431ce6b
-DTSTART;TZID=Asia/Tokyo:20241024T040000
-DTEND;TZID=Asia/Tokyo:20241024T054500
-SUMMARY:Manchester City 5-0 Sparta Praha [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 3 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
-END:VEVENT
-BEGIN:VEVENT
-UID:b26d407e-aa59-5076-bea7-01dfd18c9450
-DTSTART;TZID=Asia/Tokyo:20241106T050000
-DTEND;TZID=Asia/Tokyo:20241106T064500
-SUMMARY:Sporting CP 4-1 Manchester City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 4 | 会場: Estádio José Alvalade | 状態: Match Finished
-LOCATION:Estádio José Alvalade
-END:VEVENT
-BEGIN:VEVENT
-UID:05f86b13-b524-546b-8fe9-a99a6de149dd
-DTSTART;TZID=Asia/Tokyo:20241127T050000
-DTEND;TZID=Asia/Tokyo:20241127T064500
-SUMMARY:Manchester City 3-3 Feyenoord [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 5 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
-END:VEVENT
-BEGIN:VEVENT
-UID:42ad8e48-9eaa-5eab-a5eb-412b30190270
-DTSTART;TZID=Asia/Tokyo:20241212T050000
-DTEND;TZID=Asia/Tokyo:20241212T064500
-SUMMARY:Juventus 2-0 Manchester City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 6 | 会場: Allianz Stadium | 状態: Match Finished
-LOCATION:Allianz Stadium
-END:VEVENT
-BEGIN:VEVENT
-UID:9335a315-4400-5a9d-96c8-54c6baef667d
-DTSTART;TZID=Asia/Tokyo:20250123T050000
-DTEND;TZID=Asia/Tokyo:20250123T064500
-SUMMARY:Paris Saint Germain 4-2 Manchester City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 7 | 会場: Parc des Princes | 状態: Match Finished
-LOCATION:Parc des Princes
-END:VEVENT
-BEGIN:VEVENT
-UID:87fe3ed7-f236-53f9-ba1f-f5f3711dec82
-DTSTART;TZID=Asia/Tokyo:20250130T050000
-DTEND;TZID=Asia/Tokyo:20250130T064500
-SUMMARY:Manchester City 3-1 Club Brugge KV [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | League Stage - 8 | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
-END:VEVENT
-BEGIN:VEVENT
-UID:8b3084cb-ee8c-59fd-8af5-d41cce660d2a
-DTSTART;TZID=Asia/Tokyo:20250212T050000
-DTEND;TZID=Asia/Tokyo:20250212T064500
-SUMMARY:Manchester City 2-3 Real Madrid [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | Knockout Round Play-offs | 会場: Etihad Stadium | 状態: Match Finished
-LOCATION:Etihad Stadium
-END:VEVENT
-BEGIN:VEVENT
-UID:670af742-db89-547c-9c89-e3cd6aecf74e
-DTSTART;TZID=Asia/Tokyo:20250220T050000
-DTEND;TZID=Asia/Tokyo:20250220T064500
-SUMMARY:Real Madrid 3-1 Manchester City [UEFA Champions League]
-DESCRIPTION:UEFA Champions League | Knockout Round Play-offs | 会場: Estadio Santiago Bernabéu | 状態: Match Finished
-LOCATION:Estadio Santiago Bernabéu
+UID:1495400e-7dd1-5266-8d79-7a44be2aed63
+DTSTART;TZID=Asia/Tokyo:20260525T000000
+DTEND;TZID=Asia/Tokyo:20260525T014500
+SUMMARY:Man City vs Aston Villa [Premier League]
+DESCRIPTION:Premier League | 第38節 | 状態: TIMED
+LOCATION:
 END:VEVENT
 END:VCALENDAR
