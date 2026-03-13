@@ -34,6 +34,7 @@ BASE_URL = "https://api.football-data.org/v4"
 TARGET_COMPETITIONS = {
     "PL":  "Premier League",
     "FAC": "FA Cup",
+    "FA_CUP": "FA Cup",
     "CL":  "UEFA Champions League",
     "ELC": "EFL Cup",
     "CLI": "FIFA Club World Cup",
@@ -100,14 +101,12 @@ def get_pl_standings(api_key: str) -> list:
 
 
 def get_match_detail(api_key: str, match_id: int) -> dict:
-    """Fetch full match detail including goals/scorers.
-    X-Unfold-Goals header is required to get the goals array in v4.
-    """
+    """Fetch full match detail. In v4, goals array is returned at top level."""
     url = f"{BASE_URL}/matches/{match_id}"
     try:
-        data = fetch_json(url, api_key, extra_headers={"X-Unfold-Goals": "true"})
+        data = fetch_json(url, api_key)
         goals = data.get("goals") or []
-        print(f"[DEBUG] match {match_id}: {len(goals)} goals found", file=__import__("sys").stderr)
+        print(f"[DEBUG] match {match_id}: {len(goals)} goals in response. Keys: {list(data.keys())}", file=__import__("sys").stderr)
         return data
     except Exception:
         return {}
@@ -159,13 +158,7 @@ def format_round(match: dict) -> str:
 
 
 def format_scorers(goals: list) -> str:
-    """
-    Build goal scorer lines from the goals array.
-    Returns e.g.:
-      Goals:
-      45' Haaland (Man City)
-      67' Salah (Liverpool) [pen]
-    """
+    """Returns plain text with real newlines; escape_ics() will handle \n conversion."""
     if not goals:
         return ""
 
@@ -190,7 +183,7 @@ def format_scorers(goals: list) -> str:
         team_str = f" ({team})" if team else ""
         lines.append(f"  {time_str} {scorer}{team_str}{suffix}")
 
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def format_pl_standings(table: list) -> str:
@@ -237,7 +230,7 @@ def format_pl_standings(table: list) -> str:
         pts = city_row.get("points", 0)
         lines.append(f"Man City: {pos}{suffix}  {pts}pts")
 
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 # ---------------------------------------------------------------
@@ -283,7 +276,7 @@ def build_vevent(match: dict, tz_name: str, tz_offset_hours: int,
         if comp_code == "PL" and pl_standings_str:
             desc_parts.append(pl_standings_str)
 
-    description = escape_ics("\\n\\n".join(desc_parts)) if desc_parts else ""
+    description = escape_ics("\n\n".join(desc_parts)) if desc_parts else ""
 
     uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"footballdata-mancity-{match_id}"))
 
