@@ -1,29 +1,21 @@
 #!/usr/bin/env python3
 """
 Manchester City 試合日程 → ICS 自動生成スクリプト
-データソース: API-Sports / API-Football v3
+データソース: football-data.org (無料プラン・現シーズン対応)
 
 使い方:
   python generate_mancity_ics.py --api-key YOUR_API_KEY
 
-オプション:
-  --api-key     API-Sports の APIキー (必須)
-  --output      出力ファイル名 (デフォルト: city_official.ics)
-  --timezone    ICSに記載するタイムゾーン名 (デフォルト: Asia/Tokyo)
-  --tz-offset   UTCからのオフセット時間 (デフォルト: 9)
-  --season      シーズン開始年 (デフォルト: 2024 → 2024/25)
-  --via-rapidapi RapidAPI経由で使う場合に指定
+APIキーの取得 (無料):
+  https://www.football-data.org/client/register
 
-APIキーの取得:
-  https://dashboard.api-sports.io/ で無料登録（1日100リクエスト）
-
-Man City チームID : 50
-主な大会リーグID:
-  プレミアリーグ       : 39
-  FAカップ             : 45
-  EFLカップ            : 48
-  チャンピオンズリーグ  : 2
-  ヨーロッパリーグ     : 3
+Man City チームID : 65
+無料プランで使える大会:
+  PL  : Premier League
+  FAC : FA Cup
+  CL  : UEFA Champions League
+  ELC : EFL Cup (Football League Cup)
+  CLI : FIFA Club World Cup
 """
 
 import argparse
@@ -37,33 +29,23 @@ from urllib.error import HTTPError, URLError
 # ---------------------------------------------------------------
 # 定数
 # ---------------------------------------------------------------
-MAN_CITY_TEAM_ID = 50
-BASE_URL_APISPORTS = "https://v3.football.api-sports.io"
-BASE_URL_RAPIDAPI  = "https://api-football-v1.p.rapidapi.com/v3"
+MAN_CITY_TEAM_ID = 65
+BASE_URL = "https://api.football-data.org/v4"
 
-# 取得対象のリーグID
-TARGET_LEAGUES = {
-    39: "Premier League",
-    45: "FA Cup",
-    48: "EFL Cup",
-    2:  "Champions League",
-    3:  "Europa League",
+# 無料プランで利用可能な大会コード
+TARGET_COMPETITIONS = {
+    "PL":  "Premier League",
+    "FAC": "FA Cup",
+    "CL":  "UEFA Champions League",
+    "ELC": "EFL Cup",
+    "CLI": "FIFA Club World Cup",
 }
 
 # ---------------------------------------------------------------
 # API ヘルパー
 # ---------------------------------------------------------------
-def make_headers(api_key: str, via_rapidapi: bool) -> dict:
-    if via_rapidapi:
-        return {
-            "x-rapidapi-key":  api_key,
-            "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-        }
-    return {"x-apisports-key": api_key}
-
-
-def fetch_json(url: str, headers: dict) -> dict:
-    req = Request(url, headers=headers)
+def fetch_json(url: str, api_key: str) -> dict:
+    req = Request(url, headers={"X-Auth-Token": api_key})
     try:
         with urlopen(req, timeout=15) as res:
             return json.loads(res.read().decode())
@@ -71,46 +53,31 @@ def fetch_json(url: str, headers: dict) -> dict:
         body = e.read().decode(errors="replace")
         print(f"[ERROR] HTTP {e.code}: {url}", file=sys.stderr)
         print(f"        レスポンス: {body[:300]}", file=sys.stderr)
-        if e.code == 403:
-            print("  → APIキーが無効か、プランの制限に達した可能性があります。", file=sys.stderr)
         raise
     except URLError as e:
         print(f"[ERROR] 接続失敗: {e.reason}", file=sys.stderr)
         raise
 
 
-def get_fixtures(api_key: str, season: int, via_rapidapi: bool) -> list:
-    """Man City の全試合を取得（複数リーグ横断）"""
-    base = BASE_URL_RAPIDAPI if via_rapidapi else BASE_URL_APISPORTS
-    headers = make_headers(api_key, via_rapidapi)
-    all_fixtures = []
-    seen_ids = set()
+def get_fixtures(api_key: str) -> list:
+    """Man City の全試合を取得（現シーズン・複数大会）"""
+    url = f"{BASE_URL}/teams/{MAN_CITY_TEAM_ID}/matches"
+    print(f"[INFO] Man City の試合データを取得中...", file=sys.stderr)
+    try:
+        data = fetch_json(url, api_key)
+    except Exception:
+        sys.exit(1)
 
-    for league_id, league_name in TARGET_LEAGUES.items():
-        url = f"{base}/fixtures?team={MAN_CITY_TEAM_ID}&season={season}&league={league_id}"
-        print(f"[INFO] 取得中: {league_name} (league={league_id}, season={season})", file=sys.stderr)
-        try:
-            data = fetch_json(url, headers)
-        except Exception:
-            print(f"[WARN] {league_name} の取得をスキップしました", file=sys.stderr)
-            continue
+    matches = data.get("matches", [])
 
-        errors = data.get("errors", {})
-        if errors:
-            print(f"[WARN] APIエラー: {errors}", file=sys.stderr)
-            continue
+    # 対象大会だけに絞る
+    filtered = [
+        m for m in matches
+        if m.get("competition", {}).get("code") in TARGET_COMPETITIONS
+    ]
 
-        fixtures = data.get("response", [])
-        print(f"       → {len(fixtures)} 件", file=sys.stderr)
-
-        for f in fixtures:
-            fid = f.get("fixture", {}).get("id")
-            if fid and fid not in seen_ids:
-                seen_ids.add(fid)
-                all_fixtures.append(f)
-
-    print(f"[INFO] 合計 {len(all_fixtures)} 件の試合を取得しました", file=sys.stderr)
-    return all_fixtures
+    print(f"[INFO] {len(filtered)} 件の試合を取得しました（全{len(matches)}件中）", file=sys.stderr)
+    return filtered
 
 
 # ---------------------------------------------------------------
@@ -130,36 +97,35 @@ def utc_str_to_local(utc_str: str, tz_offset_hours: int) -> datetime:
     return dt_utc + timedelta(hours=tz_offset_hours)
 
 
-def build_vevent(fixture: dict, tz_name: str, tz_offset_hours: int) -> list:
-    fix         = fixture.get("fixture", {})
-    teams       = fixture.get("teams", {})
-    goals       = fixture.get("goals", {})
-    league_info = fixture.get("league", {})
+def build_vevent(match: dict, tz_name: str, tz_offset_hours: int) -> list:
+    competition = match.get("competition", {}).get("name", "")
+    home = (match.get("homeTeam") or {}).get("shortName") or (match.get("homeTeam") or {}).get("name", "?")
+    away = (match.get("awayTeam") or {}).get("shortName") or (match.get("awayTeam") or {}).get("name", "?")
+    status     = match.get("status", "")
+    matchday   = match.get("matchday")
+    utc_date   = match.get("utcDate", "")
+    match_id   = match.get("id", "")
+    venue      = (match.get("venue") or "")
 
-    home_name    = teams.get("home", {}).get("name", "?")
-    away_name    = teams.get("away", {}).get("name", "?")
-    competition  = league_info.get("name", "")
-    round_name   = league_info.get("round", "")
-    status_long  = fix.get("status", {}).get("long", "")
-    status_short = fix.get("status", {}).get("short", "")
-    venue_name   = fix.get("venue", {}).get("name", "") or ""
-    utc_date     = fix.get("date", "")
-    fixture_id   = fix.get("id", "")
+    # スコア
+    score = match.get("score", {})
+    ft    = score.get("fullTime", {})
+    gh, ga = ft.get("home"), ft.get("away")
 
-    # サマリー（終了試合はスコア付き）
-    if status_short == "FT":
-        g_home = goals.get("home", "-")
-        g_away = goals.get("away", "-")
-        summary = f"{home_name} {g_home}-{g_away} {away_name} [{competition}]"
+    if status == "FINISHED" and gh is not None and ga is not None:
+        summary = f"{home} {gh}-{ga} {away} [{competition}]"
     else:
-        summary = f"{home_name} vs {away_name} [{competition}]"
+        summary = f"{home} vs {away} [{competition}]"
 
-    desc_parts = [competition, round_name,
-                  f"会場: {venue_name}" if venue_name else "",
-                  f"状態: {status_long}"]
-    description = escape_ics(" | ".join(p for p in desc_parts if p))
+    desc_parts = [competition]
+    if matchday:
+        desc_parts.append(f"第{matchday}節")
+    desc_parts.append(f"状態: {status}")
+    if venue:
+        desc_parts.append(f"会場: {venue}")
+    description = escape_ics(" | ".join(desc_parts))
 
-    uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"apisports-mancity-{fixture_id}"))
+    uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"footballdata-mancity-{match_id}"))
 
     if utc_date:
         dt_start = utc_str_to_local(utc_date, tz_offset_hours)
@@ -171,7 +137,7 @@ def build_vevent(fixture: dict, tz_name: str, tz_offset_hours: int) -> list:
             f"DTEND;TZID={tz_name}:{dt_end.strftime('%Y%m%dT%H%M%S')}",
             f"SUMMARY:{escape_ics(summary)}",
             f"DESCRIPTION:{description}",
-            f"LOCATION:{escape_ics(venue_name)}",
+            f"LOCATION:{escape_ics(venue)}",
             "END:VEVENT",
         ]
     else:
@@ -185,7 +151,7 @@ def build_vevent(fixture: dict, tz_name: str, tz_offset_hours: int) -> list:
         ]
 
 
-def generate_ics(fixtures: list, tz_name: str, tz_offset_hours: int) -> str:
+def generate_ics(matches: list, tz_name: str, tz_offset_hours: int) -> str:
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -193,12 +159,12 @@ def generate_ics(fixtures: list, tz_name: str, tz_offset_hours: int) -> str:
         "CALSCALE:GREGORIAN",
         "X-WR-CALNAME:Manchester City FC",
         f"X-WR-TIMEZONE:{tz_name}",
-        "X-WR-CALDESC:Manchester City FC 試合日程 (自動生成 via API-Sports)",
+        "X-WR-CALDESC:Manchester City FC 試合日程 (自動生成 via football-data.org)",
     ]
-    for fixture in fixtures:
-        lines.extend(build_vevent(fixture, tz_name, tz_offset_hours))
+    for match in matches:
+        lines.extend(build_vevent(match, tz_name, tz_offset_hours))
     lines.append("END:VCALENDAR")
-    print(f"[INFO] {len(fixtures)} 件のイベントを ICS に出力しました", file=sys.stderr)
+    print(f"[INFO] {len(matches)} 件のイベントを ICS に出力しました", file=sys.stderr)
     return "\r\n".join(lines) + "\r\n"
 
 
@@ -206,21 +172,20 @@ def generate_ics(fixtures: list, tz_name: str, tz_offset_hours: int) -> str:
 # メイン
 # ---------------------------------------------------------------
 def main():
-    parser = argparse.ArgumentParser(description="Man City 試合日程 ICS 生成 (API-Sports版)")
-    parser.add_argument("--api-key",      required=True)
-    parser.add_argument("--output",       default="city_official.ics")
-    parser.add_argument("--timezone",     default="Asia/Tokyo")
-    parser.add_argument("--tz-offset",    type=int, default=9)
-    parser.add_argument("--season",       type=int, default=2024)
-    parser.add_argument("--via-rapidapi", action="store_true")
+    parser = argparse.ArgumentParser(description="Man City ICS生成 (football-data.org版)")
+    parser.add_argument("--api-key",   required=True, help="football-data.org の APIキー")
+    parser.add_argument("--output",    default="city_official.ics")
+    parser.add_argument("--timezone",  default="Asia/Tokyo")
+    parser.add_argument("--tz-offset", type=int, default=9)
+    # --season は football-data.org では不要（常に現シーズンを返す）
     args = parser.parse_args()
 
-    fixtures = get_fixtures(args.api_key, args.season, args.via_rapidapi)
-    if not fixtures:
-        print("[WARN] 試合データが0件です。APIキーやシーズン番号を確認してください。", file=sys.stderr)
+    matches = get_fixtures(args.api_key)
+    if not matches:
+        print("[WARN] 試合データが0件です。APIキーを確認してください。", file=sys.stderr)
         sys.exit(1)
 
-    ics = generate_ics(fixtures, args.timezone, args.tz_offset)
+    ics = generate_ics(matches, args.timezone, args.tz_offset)
     with open(args.output, "w", encoding="utf-8") as f:
         f.write(ics)
     print(f"[OK] {args.output} を生成しました", file=sys.stderr)
