@@ -42,8 +42,11 @@ TARGET_COMPETITIONS = {
 # ---------------------------------------------------------------
 # API helpers
 # ---------------------------------------------------------------
-def fetch_json(url: str, api_key: str) -> dict:
-    req = Request(url, headers={"X-Auth-Token": api_key})
+def fetch_json(url: str, api_key: str, extra_headers: dict = None) -> dict:
+    headers = {"X-Auth-Token": api_key}
+    if extra_headers:
+        headers.update(extra_headers)
+    req = Request(url, headers=headers)
     try:
         with urlopen(req, timeout=15) as res:
             return json.loads(res.read().decode())
@@ -69,6 +72,7 @@ def get_fixtures(api_key: str) -> list:
     filtered = [
         m for m in matches
         if m.get("competition", {}).get("code") in TARGET_COMPETITIONS
+        and m.get("status") != "POSTPONED"
     ]
     print(f"[INFO] {len(filtered)} fixtures found (out of {len(matches)} total)", file=sys.stderr)
     return filtered
@@ -84,18 +88,27 @@ def get_pl_standings(api_key: str) -> list:
         print("[WARN] Could not fetch PL standings.", file=sys.stderr)
         return []
 
-    for standing in data.get("standings", []):
+    standings = data.get("standings", [])
+    print(f"[DEBUG] standings types: {[s.get('type') for s in standings]}", file=__import__("sys").stderr)
+    for standing in standings:
         if standing.get("type") == "TOTAL":
-            return standing.get("table", [])
+            table = standing.get("table", [])
+            print(f"[DEBUG] PL table has {len(table)} rows", file=__import__("sys").stderr)
+            return table
+    print("[WARN] TOTAL standings not found in response", file=__import__("sys").stderr)
     return []
 
 
 def get_match_detail(api_key: str, match_id: int) -> dict:
-    """Fetch full match detail including goals/scorers."""
+    """Fetch full match detail including goals/scorers.
+    X-Unfold-Goals header is required to get the goals array in v4.
+    """
     url = f"{BASE_URL}/matches/{match_id}"
     try:
-        data = fetch_json(url, api_key)
-        return data.get("match", data)  # v4 returns match directly or under 'match'
+        data = fetch_json(url, api_key, extra_headers={"X-Unfold-Goals": "true"})
+        goals = data.get("goals") or []
+        print(f"[DEBUG] match {match_id}: {len(goals)} goals found", file=__import__("sys").stderr)
+        return data
     except Exception:
         return {}
 
@@ -260,7 +273,7 @@ def build_vevent(match: dict, tz_name: str, tz_offset_hours: int,
 
         # Fetch goal scorers from match detail endpoint
         detail = get_match_detail(api_key, match_id)
-        goals  = detail.get("goals", [])
+        goals  = detail.get("goals") or []
         if goals:
             scorers_str = format_scorers(goals)
             if scorers_str:
