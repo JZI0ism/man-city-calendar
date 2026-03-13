@@ -5,7 +5,6 @@ from datetime import datetime, timedelta, timezone
 API_KEY = os.environ["API_FOOTBALL_KEY"]
 
 TEAM_ID = 50
-
 BASE = "https://v3.football.api-sports.io"
 
 headers = {
@@ -14,17 +13,17 @@ headers = {
 
 JST = timezone(timedelta(hours=9))
 
-def current_season():
 
+def season_list():
     now = datetime.now(JST)
 
     if now.month >= 7:
-        return now.year
+        current = now.year
     else:
-        return now.year - 1
+        current = now.year - 1
 
+    return [current - 1, current, current + 1]
 
-SEASON = current_season()
 
 LEAGUE_NAME_MAP = {
     "Premier League": "Premier League",
@@ -36,7 +35,6 @@ LEAGUE_NAME_MAP = {
 
 
 def get_json(url):
-
     r = requests.get(url, headers=headers)
     r.raise_for_status()
     return r.json()
@@ -75,8 +73,11 @@ def build_event(match):
 
     uid = f"{fixture_id}@mancity-calendar"
 
+    dtstamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
     event = f"""BEGIN:VEVENT
 UID:{uid}
+DTSTAMP:{dtstamp}
 SUMMARY:{title}
 LOCATION:{stadium}
 DTSTART;TZID=Asia/Tokyo:{start}
@@ -95,6 +96,7 @@ def write_calendar(filename, events):
         f.write("VERSION:2.0\n")
         f.write("PRODID:-//ManCity Calendar//EN\n")
         f.write("CALSCALE:GREGORIAN\n")
+        f.write("X-WR-TIMEZONE:Asia/Tokyo\n")
 
         for e in events:
             f.write(e)
@@ -104,23 +106,25 @@ def write_calendar(filename, events):
 
 def main():
 
-    fixtures = get_json(
-        f"{BASE}/fixtures?team={TEAM_ID}&season={SEASON}"
-    )
-
     official = []
     friendly = []
 
-    for match in fixtures["response"]:
+    for season in season_list():
 
-        league = match["league"]["name"]
+        fixtures = get_json(
+            f"{BASE}/fixtures?team={TEAM_ID}&season={season}"
+        )
 
-        event = build_event(match)
+        for match in fixtures["response"]:
 
-        if league == "Friendlies Clubs":
-            friendly.append(event)
-        else:
-            official.append(event)
+            league = match["league"]["name"]
+
+            event = build_event(match)
+
+            if league == "Friendlies Clubs":
+                friendly.append(event)
+            else:
+                official.append(event)
 
     write_calendar("city_official.ics", official)
     write_calendar("city_friendly.ics", friendly)
